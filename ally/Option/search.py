@@ -200,7 +200,6 @@ def search(
                     optionSearchQuery(condition='strikeprice', operator='gte', value='315)   # Only consider strikes <= $315
                 ]
             )
-        ..
 
         Alternatively, the queries can be specified as Strings, but it is recommended to use the `optionSearchQuery` class for validation of the query
 
