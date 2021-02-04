@@ -21,6 +21,7 @@
 # SOFTWARE.
 
 from enum import Enum
+from typing import Union
 
 from ..utils import (
     option_callput,
@@ -98,7 +99,7 @@ class Order:
         self.orderid = None
         self._status = None
 
-        self.instrument = None
+        self.instrument: Union[Option, Stock]
         self.pricing = None
         self.buysell = None
         self.time = None

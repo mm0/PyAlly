@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+from typing import List
+
 from ..Api import AuthenticatedEndpoint, RequestType
 
 
@@ -27,7 +29,7 @@ class Quote(AuthenticatedEndpoint):
     _type = RequestType.Quote
     _resource = "market/ext/quotes.json"
     _method = "POST"
-    _symbols = []
+    _symbols: List[str] = []
 
     def extract(self, response):
         """Extract certain fields from response"""
@@ -80,7 +82,7 @@ class Quote(AuthenticatedEndpoint):
 
     @staticmethod
     def DataFrame(raw):
-        import pandas as pd
+        import pandas as pd  # type: ignore
 
         # Create dataframe from our dataset
         df = (

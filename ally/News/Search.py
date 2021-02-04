@@ -62,7 +62,7 @@ class SearchNews(AuthenticatedEndpoint):
 
     @staticmethod
     def DataFrame(raw):
-        import pandas as pd
+        import pandas as pd  # type: ignore
 
         # Create dataframe from our dataset
         df = pd.DataFrame(raw).replace({"na": None}).set_index("id")

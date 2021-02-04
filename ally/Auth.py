@@ -24,9 +24,10 @@
 """
 
 from datetime import datetime, timedelta
+from typing import Dict
 
 from requests import Session
-from requests_oauthlib import OAuth1
+from requests_oauthlib import OAuth1  # type: ignore
 
 
 class Auth:
@@ -38,7 +39,7 @@ class Auth:
     _auth_expire = None
     _valid_auth_dt = None
 
-    _params = {}
+    _params: Dict[str, str] = {}
 
     @property
     def sess(self):

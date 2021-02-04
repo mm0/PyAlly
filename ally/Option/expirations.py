@@ -27,6 +27,11 @@ class Expirations(AuthenticatedEndpoint):
     _type = RequestType.Info
     _resource = "market/options/expirations.json"
 
+    def __init__(self, auth, **kwargs):
+        self.useDatetime: bool
+
+        super().__init__(auth, **kwargs)
+
     def req_body(self, **kwargs):
         """Return get params together with post body data"""
         params = {"symbol": kwargs.get("symbol")}

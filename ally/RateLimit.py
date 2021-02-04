@@ -34,6 +34,7 @@ from datetime import datetime, timedelta, timezone
 import pytz
 
 from .classes import RequestType
+from .exception import RateLimitException
 
 __all__ = ["query"]
 

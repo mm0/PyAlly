@@ -23,6 +23,7 @@
 import weakref
 from collections.abc import MutableMapping, MutableSet
 from datetime import datetime, timedelta
+from typing import Set
 
 from .methods import (
     AppendWatchlist,
@@ -36,7 +37,7 @@ from .methods import (
 
 class WatchlistWrapper(MutableSet):
     _name = ""
-    _syms = set()
+    _syms: Set[str] = set()
 
     def __init__(self, parent, name, symbols):
         self._name = name

@@ -64,7 +64,7 @@ class Holdings(AccountEndpoint):
 
     @staticmethod
     def DataFrame(raw):
-        import pandas as pd
+        import pandas as pd  # type: ignore
 
         return pd.DataFrame(raw)
 

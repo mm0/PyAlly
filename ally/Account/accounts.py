@@ -38,7 +38,7 @@ class Accounts(AccountEndpoint):
 
     @staticmethod
     def DataFrame(raw):
-        import pandas as pd
+        import pandas as pd  # type: ignore
 
         # Wrap these in lists so that they can be read by pandas
         raw = {k: [v] for k, v in raw.items()}

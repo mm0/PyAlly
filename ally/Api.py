@@ -34,6 +34,7 @@
 """
 import datetime
 import json
+from typing import Optional
 
 from requests import Request, Session
 from requests.exceptions import HTTPError, Timeout
@@ -59,7 +60,7 @@ class Endpoint:
     _host = "https://api.tradeking.com/v1/"
 
     # One of RequestType
-    _type = None
+    _type: RequestType
 
     # Extension
     _resource = ""
@@ -91,7 +92,7 @@ class Endpoint:
         """Return get params together with post body data"""
         return None, None
 
-    def request(self=None, block: bool = True):
+    def request(self, block: bool = True):
         """Gets data from API server.
 
         Args:
@@ -173,7 +174,7 @@ class StreamEndpoint(AuthenticatedEndpoint):
 
     _host = "https://stream.tradeking.com/v1/"
 
-    def request(self=None):
+    def request(self):
         """Execute an entire loop, and aggregate results"""
 
         # use current session instance to send prepared request

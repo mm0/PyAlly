@@ -21,6 +21,7 @@
 # SOFTWARE.
 
 import json
+from typing import List
 
 from ..Api import RequestType, StreamEndpoint
 
@@ -29,7 +30,7 @@ class Stream(StreamEndpoint):
     _type = RequestType.Quote
     _resource = "market/quotes.json"
     _method = "POST"
-    _symbols = []
+    _symbols: List[str] = []
 
     def req_body(self, **kwargs):
         """Return get params together with post body data"""
