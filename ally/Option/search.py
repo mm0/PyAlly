@@ -139,9 +139,10 @@ def search(
     provided. Specify a single value or a list of values to expand the size of the search.
 
     Option queries are composed of three elements:
-        1) a condition,
+        1) a condition
         2) an operator
         3) a value
+
     in the format field-operator:value (i.e., xyear-eq:2012)
 
     Queryable Fields:
