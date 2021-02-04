@@ -20,17 +20,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import weakref
 from collections.abc import MutableMapping, MutableSet
 from datetime import datetime, timedelta
-import weakref
 
 from .methods import (
+    AppendWatchlist,
+    CreateWatchlist,
+    DeleteFromWatchlist,
+    DeleteWatchlist,
     GetWatchlist,
     GetWatchlists,
-    CreateWatchlist,
-    AppendWatchlist,
-    DeleteWatchlist,
-    DeleteFromWatchlist,
 )
 
 

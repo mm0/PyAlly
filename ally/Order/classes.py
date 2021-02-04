@@ -21,12 +21,13 @@
 # SOFTWARE.
 
 from enum import Enum
+
 from ..utils import (
-    option_format,
-    option_symbol,
-    option_strike,
-    option_maturity,
     option_callput,
+    option_format,
+    option_maturity,
+    option_strike,
+    option_symbol,
 )
 
 
